@@ -1043,6 +1043,10 @@ MonoBehaviour:
   speed: 10
   speedRun: 25
   jumpForce: 10
+  jumpScaleY: 1.5
+  jumpScaleX: 1
+  animationDuration: 0.5
+  ease: 27
 --- !u!50 &2118063563
 Rigidbody2D:
   serializedVersion: 4
