@@ -19,12 +19,25 @@ public class PlayerBase : MonoBehaviour
     public float animationDuration = .5f;
     public Ease ease = Ease.OutBack;
 
+    [Header("Shooter")]
+    public GameObject ammo;
+    public Transform shootPoint;
+    public ShooterManager poolManager;
+    
+    public int deathNumber = 0;
+
+
     private float _currentSpeed;
 
     private void Update()
     {
         HandleMoviment();
         HandleJump();
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            SpawnObject();
+        }
     }
     private void HandleMoviment()
     {
@@ -72,5 +85,19 @@ public class PlayerBase : MonoBehaviour
         myRigidBody.transform.DOScaleY(jumpScaleY, animationDuration).SetLoops(2, LoopType.Yoyo).SetEase(ease);
         myRigidBody.transform.DOScaleX(jumpScaleX, animationDuration).SetLoops(2, LoopType.Yoyo).SetEase(ease);
     }
-   
+
+    private void SpawnObject()
+    {
+        var obj = poolManager.GetPooledObject();
+        obj.SetActive(true);
+        obj.GetComponent<ProjectileFire>().StartCarProjectileFire();
+        obj.GetComponent<ProjectileFire>().OnHitTarget = CountDeaths;
+        obj.transform.position = shootPoint.transform.position;
+    }
+
+    private void CountDeaths()
+    {
+        deathNumber++;
+        Debug.Log("Count" + deathNumber);
+    }
 }
