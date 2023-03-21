@@ -6,6 +6,7 @@ public class ProjectileFire : MonoBehaviour
 {
     public float timeToDestroy = 4f;
     public string tagToLook = "Enemy";
+    public int damage = 3;
 
     public Vector2 dir;
 
