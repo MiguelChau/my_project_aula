@@ -15,10 +15,10 @@ public class ProjectileFire : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(dir * Time.deltaTime);
+        transform.position += new Vector3(dir.x, dir.y, 0) * Time.deltaTime;
     }
 
-    public void StartCarProjectileFire()
+    public void StartProjectileFire()
     {
         Invoke(nameof(FinishUsage), timeToDestroy);
     }
@@ -29,7 +29,7 @@ public class ProjectileFire : MonoBehaviour
         OnHitTarget = null;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.tag == tagToLook)
         {

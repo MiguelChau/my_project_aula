@@ -90,7 +90,8 @@ public class PlayerBase : MonoBehaviour
     {
         var obj = poolManager.GetPooledObject();
         obj.SetActive(true);
-        obj.GetComponent<ProjectileFire>().StartCarProjectileFire();
+        obj.GetComponent<ProjectileFire>().StartProjectileFire();
+        obj.GetComponent<ProjectileFire>().dir = Vector3.left;
         obj.GetComponent<ProjectileFire>().OnHitTarget = CountDeaths;
         obj.transform.position = shootPoint.transform.position;
     }
