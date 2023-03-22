@@ -15,7 +15,7 @@ public class ProjectileFire : MonoBehaviour
 
     private void Update()
     {
-        transform.position += new Vector3(dir.x, dir.y, 0) * Time.deltaTime;
+        transform.Translate(Vector3.down * 3f * Time.deltaTime);
     }
 
     public void StartProjectileFire()
