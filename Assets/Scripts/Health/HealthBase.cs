@@ -8,6 +8,7 @@ public class HealthBase : MonoBehaviour
     public string boolDie = "Die";
     public Animator animator;
 
+
     public bool destroyOnKill = false;
 
     public float delayToKill = 0f;

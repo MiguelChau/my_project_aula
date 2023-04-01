@@ -31,6 +31,8 @@ public class PlayerBase : MonoBehaviour
     public string boolRun = "Run";
     public Animator animator;
     public float playerSwipeDuration = .1f;
+    
+    
 
     private float _currentSpeed;
 
@@ -39,10 +41,10 @@ public class PlayerBase : MonoBehaviour
         HandleMoviment();
         HandleJump();
 
-        if (Input.GetKeyDown(KeyCode.A))
+        /*if (Input.GetKeyDown(KeyCode.A))
         {
             SpawnObject();
-        }
+        }*/
     }
     private void HandleMoviment()
     {
@@ -57,7 +59,7 @@ public class PlayerBase : MonoBehaviour
             myRigidBody.velocity = new Vector2(-_currentSpeed, myRigidBody.velocity.y);
             if (myRigidBody.transform.localScale.x != -1)
             {
-                myRigidBody.transform.DOScaleX(-1,playerSwipeDuration);
+                myRigidBody.transform.DOScaleX(-1, playerSwipeDuration);
             }
             animator.SetBool(boolRun, true);
         }
@@ -105,7 +107,7 @@ public class PlayerBase : MonoBehaviour
         myRigidBody.transform.DOScaleX(jumpScaleX, animationDuration).SetLoops(2, LoopType.Yoyo).SetEase(ease);
     }
 
-    private void SpawnObject()
+    /*private void SpawnObject()
     {
         var obj = poolManager.GetPooledObject();
         obj.SetActive(true);
@@ -119,5 +121,5 @@ public class PlayerBase : MonoBehaviour
     {
         deathNumber++;
         Debug.Log("Count" + deathNumber);
-    }
+    }*/
 }
