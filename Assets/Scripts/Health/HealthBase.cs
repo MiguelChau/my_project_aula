@@ -5,6 +5,8 @@ using UnityEngine;
 public class HealthBase : MonoBehaviour
 {
     public int startLife = 6;
+    public string boolDie = "Die";
+    public Animator animator;
 
     public bool destroyOnKill = false;
 
@@ -42,6 +44,7 @@ public class HealthBase : MonoBehaviour
         if(destroyOnKill)
         {
             Destroy(gameObject, delayToKill);
+            animator.SetBool(boolDie, true);
         }
     }
 }
