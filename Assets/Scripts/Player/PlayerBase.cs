@@ -18,6 +18,8 @@ public class PlayerBase : MonoBehaviour
     public float jumpScaleX = 1f;
     public float animationDuration = .5f;
     public Ease ease = Ease.OutBack;
+    public string boolJump = "jump";
+
 
     [Header("Shooter")]
     public GameObject ammo;
@@ -93,11 +95,15 @@ public class PlayerBase : MonoBehaviour
         {
             myRigidBody.velocity = Vector2.up * jumpForce;
             //usado para que não buggue o scale!//
-            myRigidBody.transform.localScale = Vector2.one; 
-
+            myRigidBody.transform.localScale = Vector2.one;
+            animator.SetBool(boolJump, true);
             DOTween.Kill(myRigidBody.transform);
 
             HandleScale();
+        }
+        else
+        {
+            animator.SetBool(boolJump, false);
         }
     }
 
