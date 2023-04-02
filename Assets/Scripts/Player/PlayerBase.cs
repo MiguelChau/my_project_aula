@@ -18,7 +18,7 @@ public class PlayerBase : MonoBehaviour
     public float jumpScaleX = 1f;
     public float animationDuration = .5f;
     public Ease ease = Ease.OutBack;
-    public string boolJump = "jump";
+    
 
 
     [Header("Shooter")]
@@ -33,6 +33,7 @@ public class PlayerBase : MonoBehaviour
     public string boolRun = "Run";
     public Animator animator;
     public float playerSwipeDuration = .1f;
+    bool isJumping = false;
     
     
 
@@ -42,11 +43,17 @@ public class PlayerBase : MonoBehaviour
     {
         HandleMoviment();
         HandleJump();
+        Restart();
 
         /*if (Input.GetKeyDown(KeyCode.A))
         {
             SpawnObject();
         }*/
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        animator.SetBool("jump", false);
     }
     private void HandleMoviment()
     {
@@ -63,6 +70,7 @@ public class PlayerBase : MonoBehaviour
             {
                 myRigidBody.transform.DOScaleX(-1, playerSwipeDuration);
             }
+            if(!animator.GetBool("jump"))
             animator.SetBool(boolRun, true);
         }
         else if (Input.GetKey(KeyCode.RightArrow))
@@ -72,7 +80,8 @@ public class PlayerBase : MonoBehaviour
             {
                 myRigidBody.transform.DOScaleX(1, playerSwipeDuration);
             }
-            animator.SetBool(boolRun, true);
+            if (!animator.GetBool("jump"))
+                animator.SetBool(boolRun, true);
         }
         else
         {
@@ -96,15 +105,21 @@ public class PlayerBase : MonoBehaviour
             myRigidBody.velocity = Vector2.up * jumpForce;
             //usado para que não buggue o scale!//
             myRigidBody.transform.localScale = Vector2.one;
-            animator.SetBool(boolJump, true);
+            if (!animator.GetBool("jump"))
+            {
+                isJumping = true;
+                animator.SetBool("jump", true);
+            }
             DOTween.Kill(myRigidBody.transform);
 
             HandleScale();
         }
-        else
+        if (!isJumping)
         {
-            animator.SetBool(boolJump, false);
+            return;
         }
+
+        isJumping = false;
     }
 
     private void HandleScale()
@@ -128,4 +143,11 @@ public class PlayerBase : MonoBehaviour
         deathNumber++;
         Debug.Log("Count" + deathNumber);
     }*/
+    void Restart()
+    {
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            animator.SetTrigger("idle");
+        }
+    }
 }
