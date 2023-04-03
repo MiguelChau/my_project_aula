@@ -471,7 +471,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 280891179}
   m_LocalRotation: {x: 0.09311421, y: 0.03583098, z: -0.0033538505, w: 0.9950049}
-  m_LocalPosition: {x: -1.3767954, y: 1.7653853, z: -7.800917}
+  m_LocalPosition: {x: -1.3767952, y: 1.7653853, z: -7.800917}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1189,7 +1189,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.09311421, y: 0.03583098, z: -0.0033538505, w: 0.9950049}
-  m_LocalPosition: {x: -1.3767954, y: 1.7653853, z: -7.800917}
+  m_LocalPosition: {x: -1.3767952, y: 1.7653853, z: -7.800917}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1888,6 +1888,7 @@ MonoBehaviour:
   boolRun: Run
   animator: {fileID: 1187901149}
   playerSwipeDuration: 0.1
+  isLookingUp: 0
 --- !u!50 &2118063563
 Rigidbody2D:
   serializedVersion: 4

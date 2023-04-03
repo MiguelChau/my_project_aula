@@ -6,6 +6,7 @@ using DG.Tweening;
 public class PlayerBase : MonoBehaviour
 {
     public Rigidbody2D myRigidBody;
+    private bool alive = true;
 
     [Header("Speed")]
     public Vector2 friction = new Vector2(-.1f, 0);
@@ -34,16 +35,22 @@ public class PlayerBase : MonoBehaviour
     public Animator animator;
     public float playerSwipeDuration = .1f;
     bool isJumping = false;
+    public bool isLookingUp = false;
     
     
-
     private float _currentSpeed;
+    
 
     private void Update()
     {
-        HandleMoviment();
-        HandleJump();
         Restart();
+        if (alive)
+        {
+            HandleMoviment();
+            HandleJump();
+            LookUp();
+        }
+          
 
         /*if (Input.GetKeyDown(KeyCode.A))
         {
@@ -53,7 +60,7 @@ public class PlayerBase : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        animator.SetBool("jump", false);
+        animator.SetBool("Jump", false);
     }
     private void HandleMoviment()
     {
@@ -70,7 +77,7 @@ public class PlayerBase : MonoBehaviour
             {
                 myRigidBody.transform.DOScaleX(-1, playerSwipeDuration);
             }
-            if(!animator.GetBool("jump"))
+            if(!animator.GetBool("Jump"))
             animator.SetBool(boolRun, true);
         }
         else if (Input.GetKey(KeyCode.RightArrow))
@@ -80,7 +87,7 @@ public class PlayerBase : MonoBehaviour
             {
                 myRigidBody.transform.DOScaleX(1, playerSwipeDuration);
             }
-            if (!animator.GetBool("jump"))
+            if (!animator.GetBool("Jump"))
                 animator.SetBool(boolRun, true);
         }
         else
@@ -105,10 +112,10 @@ public class PlayerBase : MonoBehaviour
             myRigidBody.velocity = Vector2.up * jumpForce;
             //usado para que não buggue o scale!//
             myRigidBody.transform.localScale = Vector2.one;
-            if (!animator.GetBool("jump"))
+            if (!animator.GetBool("Jump"))
             {
                 isJumping = true;
-                animator.SetBool("jump", true);
+                animator.SetBool("Jump", true);
             }
             DOTween.Kill(myRigidBody.transform);
 
@@ -143,11 +150,29 @@ public class PlayerBase : MonoBehaviour
         deathNumber++;
         Debug.Log("Count" + deathNumber);
     }*/
-    void Restart()
+    public void Restart()
     {
         if (Input.GetKeyDown(KeyCode.M))
         {
-            animator.SetTrigger("idle");
+            animator.SetTrigger("Idle");
+            alive = true;
         }
     }
+
+    public void LookUp()
+    {
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            isLookingUp = true;
+            animator.SetBool("LookUp", true);
+            
+            
+        }
+        else
+        {
+            isLookingUp = false;
+        }
+    }
+
+   
 }
