@@ -58,10 +58,6 @@ public class PlayerBase : MonoBehaviour
         }*/
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        animator.SetBool("Jump", false);
-    }
     private void HandleMoviment()
     {
         if (Input.GetKey(KeyCode.Z))

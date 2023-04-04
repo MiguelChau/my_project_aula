@@ -1888,7 +1888,7 @@ MonoBehaviour:
   boolRun: Run
   animator: {fileID: 1187901149}
   playerSwipeDuration: 0.1
-  isLookingUp: 0
+  isLookingUp: 1
 --- !u!50 &2118063563
 Rigidbody2D:
   serializedVersion: 4
