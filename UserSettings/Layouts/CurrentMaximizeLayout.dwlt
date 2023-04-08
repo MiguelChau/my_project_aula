@@ -225,20 +225,20 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: b8620000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 9434fdff406afdfff092fdff54d8feff6c7cffffe2c1fffff8c1ffff2ec2ffff38c2ffffbec2ffffc0c2ffffccc2ffff26c3ffff48c3ffff6ec3ffffb6c3ffffc6c3ffffd2c3ffff9cc6ffff3ac7ffffa8f4fffffcfaffff0efbffff0c600000d42101009c220100a0220100d422010032230100e4230100042401003824010090250100d2250100e625010086260100922601002e2701005c2801008a280100da280100f0280100
+      m_SelectedIDs: 2e240100
+      m_LastClickedID: 74798
+      m_ExpandedIDs: f092fdff50b9fdff54d8feff6c7cffffe2c1fffff8c1ffff2ec2ffff38c2ffffbec2ffffc0c2ffffccc2ffff26c3ffff48c3ffff6ec3ffffb6c3ffffc6c3ffffd2c3ffff9cc6ffff3ac7ffffa8f4fffffcfaffff0efbffff0c600000d42101009c220100a0220100d422010032230100e4230100042401003824010090250100d2250100e625010086260100922601002e2701005c2801008a280100da280100f028010012290100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Slime Enemy 1
-        m_OriginalName: Slime Enemy 1
+        m_Name: PFB_Dev_Enemy 1
+        m_OriginalName: PFB_Dev_Enemy 1
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -159518
+        m_UserData: 74724
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -558,9 +558,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -29.138792, y: 5.613634, z: 15.7686205}
+    m_Target: {x: 0.736, y: 2.718, z: 2}
     speed: 2
-    m_Value: {x: -29.138792, y: 5.613634, z: 15.7686205}
+    m_Value: {x: 0.7360016, y: 2.7180004, z: 2}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -611,9 +611,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 9.974285
+    m_Target: 10
     speed: 2
-    m_Value: 9.974285
+    m_Value: 9.999999
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -660,7 +660,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 204
     y: 73
-    width: 659
+    width: 547
     height: 546
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -672,14 +672,14 @@ MonoBehaviour:
     - {fileID: 1107232464675883738, guid: 1b58d63f942126347865fbdde70e67c5, type: 2}
     - {fileID: 1107040346203751106, guid: fb53b4d3a4f06844c90da7297e9082de, type: 2}
     m_ValueSerializationHelper:
-    - e00: 0.61128175
+    - e00: 1.0404766
       e01: 0
       e02: 0
-      e03: -18.897232
+      e03: -586.4051
       e10: 0
-      e11: 0.61128175
+      e11: 1.0404766
       e12: 0
-      e13: 130.02356
+      e13: 62.42862
       e20: 0
       e21: 0
       e22: 1
@@ -721,9 +721,9 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: fb53b4d3a4f06844c90da7297e9082de, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: fe79526b5cda9684bbfddbfe18a7f75c, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 1107040346203751106, guid: fb53b4d3a4f06844c90da7297e9082de, type: 2}
+  - m_Target: {fileID: -2392370946678758701, guid: fe79526b5cda9684bbfddbfe18a7f75c, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -755,8 +755,8 @@ MonoBehaviour:
     y: 0
     width: 731
     height: 567
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 2}
@@ -874,7 +874,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ee620000f0620000f2620000f4620000f8620000fa620000b4a80000f4a80000002e010000ca9a3b
+    m_ExpandedIDs: 00000000ee620000f0620000f2620000f4620000f8620000fa620000b4a80000f4a8000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -899,9 +899,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: b8620000
-    m_LastClickedInstanceID: 25272
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 2e240100
+    m_LastClickedInstanceID: 74798
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300001a5e0000b42c0100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -988,7 +988,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -183148
+  m_LastSelectedObjectID: 76050
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
