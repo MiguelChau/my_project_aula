@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
+
 public class PlayerBase : MonoBehaviour
 {
     public Rigidbody2D myRigidBody;
     private bool alive = true;
+    public HealthBase healthBase;
+    
+    
 
     [Header("Speed")]
     public Vector2 friction = new Vector2(-.1f, 0);
@@ -19,19 +23,12 @@ public class PlayerBase : MonoBehaviour
     public float jumpScaleX = 1f;
     public float animationDuration = .5f;
     public Ease ease = Ease.OutBack;
-    
-
-
-    [Header("Shooter")]
-    public GameObject ammo;
-    public Transform shootPoint;
-    public ShooterManager poolManager;
-    
-    public int deathNumber = 0;
 
 
     [Header("Animation Player")]
     public string boolRun = "Run";
+    public string triggerDeath = "Die";
+    public string triggerAttack = "Attack";
     public Animator animator;
     public float playerSwipeDuration = .1f;
     bool isJumping = false;
@@ -39,8 +36,20 @@ public class PlayerBase : MonoBehaviour
     
     
     private float _currentSpeed;
-    
 
+    private void Awake()
+    {
+        if (healthBase != null)
+        {
+            healthBase.OnKill += OnPlayerKill;
+        }
+    }
+    private void OnPlayerKill()
+    {
+        healthBase.OnKill -= OnPlayerKill;
+
+        animator.SetTrigger(triggerDeath);
+    }
     private void Update()
     {
         Restart();
@@ -49,15 +58,10 @@ public class PlayerBase : MonoBehaviour
             HandleMoviment();
             HandleJump();
             LookUp();
+            Attack();
         }
-          
-
-        /*if (Input.GetKeyDown(KeyCode.A))
-        {
-            SpawnObject();
-        }*/
     }
-
+  
     private void HandleMoviment()
     {
         if (Input.GetKey(KeyCode.Z))
@@ -105,6 +109,7 @@ public class PlayerBase : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
+            ResetAnimation();
             myRigidBody.velocity = Vector2.up * jumpForce;
             //usado para que não buggue o scale!//
             myRigidBody.transform.localScale = Vector2.one;
@@ -131,21 +136,7 @@ public class PlayerBase : MonoBehaviour
         myRigidBody.transform.DOScaleX(jumpScaleX, animationDuration).SetLoops(2, LoopType.Yoyo).SetEase(ease);
     }
 
-    /*private void SpawnObject()
-    {
-        var obj = poolManager.GetPooledObject();
-        obj.SetActive(true);
-        obj.GetComponent<ProjectileFire>().StartProjectileFire();
-        obj.GetComponent<ProjectileFire>().dir = Vector3.left;
-        obj.GetComponent<ProjectileFire>().OnHitTarget = CountDeaths;
-        obj.transform.position = shootPoint.transform.position;
-    }
-
-    private void CountDeaths()
-    {
-        deathNumber++;
-        Debug.Log("Count" + deathNumber);
-    }*/
+   
     public void Restart()
     {
         if (Input.GetKeyDown(KeyCode.M))
@@ -159,7 +150,7 @@ public class PlayerBase : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            isLookingUp = true;
+            ResetAnimation();
             animator.SetBool("LookUp", true);
             
             
@@ -169,6 +160,23 @@ public class PlayerBase : MonoBehaviour
             isLookingUp = false;
         }
     }
-
-   
+  
+    public void DestroyMe()
+    {
+        Destroy(gameObject);
+    }
+    
+    public void Attack()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            ResetAnimation();
+            animator.SetTrigger("Attack");
+        }
+    }
+    public void ResetAnimation()
+    {
+        animator.SetBool("LookUp", false);
+        animator.SetBool("Jump", false);
+    }
 }

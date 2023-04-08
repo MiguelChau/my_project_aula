@@ -4,40 +4,38 @@ using UnityEngine;
 
 public class ProjectileFire : MonoBehaviour
 {
-    public float timeToDestroy = 4f;
-    public string tagToLook = "Enemy";
+    public Vector3 direction;
+
+    public float timeToDestroy = 2f;
+    public float side = -1;
     public int damage = 3;
 
-    public Vector2 dir;
+    
 
-    public Action OnHitTarget;
-
+    private void Awake()
+    {
+        Destroy(gameObject, timeToDestroy);
+    }
 
     private void Update()
     {
-        transform.Translate(Vector3.down * 3f * Time.deltaTime);
+        transform.Translate(direction * Time.deltaTime * side);
     }
-
-    public void StartProjectileFire()
+     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Invoke(nameof(FinishUsage), timeToDestroy);
-    }
+        var enemy = collision.transform.GetComponent<EnemyBase>();
 
-    private void FinishUsage()
-    {
-        gameObject.SetActive(false);
-        OnHitTarget = null;
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.transform.tag == tagToLook)
+        if(enemy != null)
         {
-            Destroy(collision.gameObject);
-            OnHitTarget?.Invoke();
-            FinishUsage();
+            enemy.Damage(damage);
+            Destroy(gameObject); 
         }
     }
+
+
+
+
+
 
 }
 

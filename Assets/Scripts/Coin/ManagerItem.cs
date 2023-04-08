@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Core.Singleton;
+using TMPro;
+using UnityEngine.UI;
 
 public class ManagerItem : Singleton<ManagerItem>
 {
     public int coins;
+
 
     private void Start()
     {
@@ -20,5 +23,7 @@ public class ManagerItem : Singleton<ManagerItem>
     public void AddCoins(int amount = 1)
     {
         coins += amount;
+        
     }
+   
 }

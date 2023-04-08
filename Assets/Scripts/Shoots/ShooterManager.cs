@@ -4,36 +4,40 @@ using UnityEngine;
 
 public class ShooterManager : MonoBehaviour
 {
-    public GameObject prefab;
-    public List<GameObject> pooledOfObjects;
+    public ProjectileFire prefabProjectile;
 
-    public int amount = 1000;
+    public Transform positionToFire;
 
-    private void Awake()
+    public float timeBetweenShoot = .2f;
+    public Transform playerSideReference;
+
+    private Coroutine _currentCoroutine;
+
+    public void Update()
     {
-        StartPool();
-    }
-    private void StartPool()
-    {
-        pooledOfObjects = new List<GameObject>();
-        for (int c = 0; c < amount; c++)
+        if(Input.GetKeyDown(KeyCode.A))
         {
-            var obj = Instantiate(prefab, transform);
-            obj.SetActive(false);
-            pooledOfObjects.Add(obj);
+            _currentCoroutine = StartCoroutine(StartFire());
+        }
+        else if (Input.GetKeyUp(KeyCode.A))
+        {
+            if (_currentCoroutine != null) StopCoroutine(_currentCoroutine);
         }
     }
 
-    public GameObject GetPooledObject()
+    IEnumerator StartFire()
     {
-        for (int c = 0; c < amount; c++)
+        while(true)
         {
-            if (!pooledOfObjects[c].activeInHierarchy)
-            {
-                return pooledOfObjects[c];
-            }
+            Shoot();
+            yield return new WaitForSeconds(timeBetweenShoot);
         }
-        return null;
+    }
+    public void Shoot()
+    {
+        var projectile = Instantiate(prefabProjectile);
+        projectile.transform.position = positionToFire.position;
+        projectile.side = playerSideReference.transform.localScale.x;
     }
 }
 
