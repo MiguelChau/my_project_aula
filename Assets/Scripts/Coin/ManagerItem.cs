@@ -11,7 +11,7 @@ public class ManagerItem : Singleton<ManagerItem>
 
     [Header("Coins")]
     public int currentCoins;
-    public TextMeshProUGUI uiTextCoins;
+    public TMP_Text uiTextCoins;
 
     private void Start()
     {
