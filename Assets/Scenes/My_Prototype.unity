@@ -3893,7 +3893,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 280891179}
   m_LocalRotation: {x: 0.09311421, y: 0.03583098, z: -0.0033538505, w: 0.9950049}
-  m_LocalPosition: {x: -1.3767952, y: 1.7653853, z: -7.800917}
+  m_LocalPosition: {x: -1.3767954, y: 1.7653853, z: -7.800917}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7157,7 +7157,7 @@ GameObject:
   - component: {fileID: 586099352}
   m_Layer: 0
   m_Name: Coins
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7725,7 +7725,6 @@ MonoBehaviour:
   startLife: 6
   destroyOnKill: 0
   delayToKill: 0
-  _flashColor: {fileID: 644469475}
 --- !u!114 &644469473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7773,7 +7772,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderers: []
-  color: {r: 0.24280453, g: 1, b: 0, a: 1}
+  color:
+    r: 0.24280453
+    g: 1
+    b: 0
+    a: 1
   duration: 0.1
 --- !u!1001 &645163255
 PrefabInstance:
@@ -11586,7 +11589,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderers: []
-  color: {r: 0, g: 0.14240766, b: 1, a: 1}
+  color:
+    r: 0
+    g: 0.14240766
+    b: 1
+    a: 1
   duration: 0.1
 --- !u!50 &949320256
 Rigidbody2D:
@@ -11650,7 +11657,6 @@ MonoBehaviour:
   startLife: 60
   destroyOnKill: 0
   delayToKill: 0
-  _flashColor: {fileID: 0}
 --- !u!114 &949320259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11956,7 +11962,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.09311421, y: 0.03583098, z: -0.0033538505, w: 0.9950049}
-  m_LocalPosition: {x: -1.3767952, y: 1.7653853, z: -7.800917}
+  m_LocalPosition: {x: -1.3767954, y: 1.7653853, z: -7.800917}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13995,17 +14001,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4105362945620786471, guid: ebea5f8b8163f9a4ab9d9a1b45444e28, type: 3}
   m_PrefabInstance: {fileID: 788126979}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1187901151 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4430315780018669977, guid: ebea5f8b8163f9a4ab9d9a1b45444e28, type: 3}
-  m_PrefabInstance: {fileID: 788126979}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 711934291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59ace1ac43f27284bb308cff3bc87b7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!210 &1187901152
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -15879,7 +15874,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderers: []
-  color: {r: 0, g: 0.14240766, b: 1, a: 1}
+  color:
+    r: 0
+    g: 0.14240766
+    b: 1
+    a: 1
   duration: 0.1
 --- !u!50 &1342530031
 Rigidbody2D:
@@ -15943,7 +15942,6 @@ MonoBehaviour:
   startLife: 6
   destroyOnKill: 0
   delayToKill: 0
-  _flashColor: {fileID: 0}
 --- !u!114 &1342530034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22763,7 +22761,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderers: []
-  color: {r: 0.24280453, g: 1, b: 0, a: 1}
+  color:
+    r: 0.24280453
+    g: 1
+    b: 0
+    a: 1
   duration: 0.1
 --- !u!50 &1553967581
 Rigidbody2D:
@@ -22827,7 +22829,6 @@ MonoBehaviour:
   startLife: 6
   destroyOnKill: 0
   delayToKill: 0
-  _flashColor: {fileID: 1553967580}
 --- !u!114 &1553967584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26707,7 +26708,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderers: []
-  color: {r: 0, g: 0.14240766, b: 1, a: 1}
+  color:
+    r: 0
+    g: 0.14240766
+    b: 1
+    a: 1
   duration: 0.1
 --- !u!50 &1903800320
 Rigidbody2D:
@@ -26771,7 +26776,6 @@ MonoBehaviour:
   startLife: 6
   destroyOnKill: 0
   delayToKill: 0
-  _flashColor: {fileID: 0}
 --- !u!114 &1903800323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28771,6 +28775,8 @@ MonoBehaviour:
   animator: {fileID: 1187901149}
   playerSwipeDuration: 0.1
   isLookingUp: 1
+  currentCoins: 0
+  uiTextCoins: {fileID: 1419368696}
 --- !u!50 &2118063563
 Rigidbody2D:
   serializedVersion: 4
@@ -28849,7 +28855,6 @@ MonoBehaviour:
   startLife: 6
   destroyOnKill: 0
   delayToKill: 0.5
-  _flashColor: {fileID: 1187901151}
 --- !u!1 &2118407792
 GameObject:
   m_ObjectHideFlags: 0

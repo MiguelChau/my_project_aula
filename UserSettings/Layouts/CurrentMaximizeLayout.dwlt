@@ -86,7 +86,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 286c0000
+      m_SelectedIDs: 2e6c0000
       m_LastClickedID: 0
       m_ExpandedIDs: f092fdff50b9fdff54d8feff6c7cffffe2c1fffff8c1ffff2ec2ffff38c2ffffbec2ffffc0c2ffffccc2ffff26c3ffff48c3ffff6ec3ffffb6c3ffffc6c3ffffd2c3ffff9cc6ffff3ac7ffffa8f4fffffcfaffff0efbffff0c600000bc600000ba6100001662000052620000e66200002e64000076660000d42101009c220100a0220100d422010032230100e4230100042401003824010090250100d2250100e625010086260100922601002e2701005c2801008a280100da280100f028010012290100
       m_RenameOverlay:
@@ -789,7 +789,7 @@ MonoBehaviour:
   - {fileID: 13}
   - {fileID: 14}
   m_Selected: 0
-  m_LastSelected: 1
+  m_LastSelected: 2
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -831,22 +831,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Wizard - 2D Character/Animations
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/Wizard - 2D Character/Animations
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Utilizador\UnityProjects\Github\my_project_aula
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 306e0000
-    m_LastClickedID: 28208
-    m_ExpandedIDs: 00000000266e0000286e00002a6e00002c6e00002e6e0000306e0000326e0000346e0000466e00004a6e00004e6e000000ca9a3b
+    scrollPos: {x: 0, y: 93}
+    m_SelectedIDs: 506e0000
+    m_LastClickedID: 28240
+    m_ExpandedIDs: 00000000266e0000286e00002a6e00002c6e00002e6e0000306e0000326e0000346e00004a6e00004e6e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -874,7 +874,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000266e0000286e00002a6e00002c6e00002e6e0000306e0000326e0000346e0000
+    m_ExpandedIDs: 00000000266e0000286e00002a6e00002c6e00002e6e0000306e0000326e0000346e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -899,9 +899,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 286c0000
-    m_LastClickedInstanceID: 27688
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 486c0000
+    m_LastClickedInstanceID: 27720
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300001a5e0000b42c0100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -988,7 +988,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 25110
+  m_LastSelectedObjectID: 27720
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
