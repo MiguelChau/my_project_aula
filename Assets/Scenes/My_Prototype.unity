@@ -7771,13 +7771,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59ace1ac43f27284bb308cff3bc87b7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderers: []
-  color:
-    r: 0.24280453
-    g: 1
-    b: 0
-    a: 1
-  duration: 0.1
 --- !u!1001 &645163255
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11588,13 +11581,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59ace1ac43f27284bb308cff3bc87b7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderers: []
-  color:
-    r: 0
-    g: 0.14240766
-    b: 1
-    a: 1
-  duration: 0.1
 --- !u!50 &949320256
 Rigidbody2D:
   serializedVersion: 4
@@ -15873,13 +15859,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59ace1ac43f27284bb308cff3bc87b7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderers: []
-  color:
-    r: 0
-    g: 0.14240766
-    b: 1
-    a: 1
-  duration: 0.1
 --- !u!50 &1342530031
 Rigidbody2D:
   serializedVersion: 4
@@ -22760,13 +22739,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59ace1ac43f27284bb308cff3bc87b7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderers: []
-  color:
-    r: 0.24280453
-    g: 1
-    b: 0
-    a: 1
-  duration: 0.1
 --- !u!50 &1553967581
 Rigidbody2D:
   serializedVersion: 4
@@ -26707,13 +26679,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59ace1ac43f27284bb308cff3bc87b7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderers: []
-  color:
-    r: 0
-    g: 0.14240766
-    b: 1
-    a: 1
-  duration: 0.1
 --- !u!50 &1903800320
 Rigidbody2D:
   serializedVersion: 4
@@ -28227,6 +28192,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coins: 0
+  currentCoins: 0
+  uiTextCoins: {fileID: 1419368696}
 --- !u!1 &2079039407 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1090219386143568, guid: a817c29ea6847604bb2c6c51d9a74bf1, type: 3}
@@ -28775,8 +28742,6 @@ MonoBehaviour:
   animator: {fileID: 1187901149}
   playerSwipeDuration: 0.1
   isLookingUp: 1
-  currentCoins: 0
-  uiTextCoins: {fileID: 1419368696}
 --- !u!50 &2118063563
 Rigidbody2D:
   serializedVersion: 4

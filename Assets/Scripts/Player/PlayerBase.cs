@@ -36,9 +36,7 @@ public class PlayerBase : MonoBehaviour
     bool isJumping = false;
     public bool isLookingUp = false;
 
-    [Header("Coins")]
-    public int currentCoins;
-    public TextMeshProUGUI uiTextCoins;
+    
     
     private float _currentSpeed;
 
@@ -49,16 +47,7 @@ public class PlayerBase : MonoBehaviour
             healthBase.OnKill += OnPlayerKill;
         }
     }
-    public void AddCoin()
-    {
-        currentCoins++;
-        UpdateUI();
-    }
-
-    private void UpdateUI()
-    {
-        uiTextCoins.text = currentCoins.ToString();
-    }
+   
     
     private void OnPlayerKill()
     {
