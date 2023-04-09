@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UI;
+using TMPro;
 
 
 public class PlayerBase : MonoBehaviour
@@ -9,7 +11,7 @@ public class PlayerBase : MonoBehaviour
     public Rigidbody2D myRigidBody;
     private bool alive = true;
     public HealthBase healthBase;
-    
+   
     
 
     [Header("Speed")]
@@ -33,7 +35,10 @@ public class PlayerBase : MonoBehaviour
     public float playerSwipeDuration = .1f;
     bool isJumping = false;
     public bool isLookingUp = false;
-    
+
+    [Header("Coins")]
+    public int currentCoins;
+    public TextMeshProUGUI uiTextCoins;
     
     private float _currentSpeed;
 
@@ -44,6 +49,17 @@ public class PlayerBase : MonoBehaviour
             healthBase.OnKill += OnPlayerKill;
         }
     }
+    public void AddCoin()
+    {
+        currentCoins++;
+        UpdateUI();
+    }
+
+    private void UpdateUI()
+    {
+        uiTextCoins.text = currentCoins.ToString();
+    }
+    
     private void OnPlayerKill()
     {
         healthBase.OnKill -= OnPlayerKill;
@@ -126,8 +142,10 @@ public class PlayerBase : MonoBehaviour
         {
             return;
         }
-
-        isJumping = false;
+        else
+        {
+            isJumping = false;
+        }
     }
 
     private void HandleScale()
@@ -179,4 +197,6 @@ public class PlayerBase : MonoBehaviour
         animator.SetBool("LookUp", false);
         animator.SetBool("Jump", false);
     }
+
+
 }
