@@ -9,24 +9,19 @@ public class ManagerItem : Singleton<ManagerItem>
 {
     public int coins;
 
-    [Header("Coins")]
-    public int currentCoins;
-    public TMP_Text uiTextCoins;
+    
+    public TextMeshProUGUI uiTextCoins;
 
     private void Start()
     {
         Reset();
     }
 
-    public void AddCoin()
-    {
-        currentCoins++;
-        UpdateUI();
-    }
+   
 
     private void UpdateUI()
     {
-        uiTextCoins.text = currentCoins.ToString();
+        uiTextCoins.text = coins.ToString();
     }
 
     private void Reset()
@@ -37,7 +32,8 @@ public class ManagerItem : Singleton<ManagerItem>
     public void AddCoins(int amount = 1)
     {
         coins += amount;
-        
+        UpdateUI();
+
     }
    
 }

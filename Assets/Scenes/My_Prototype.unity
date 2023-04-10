@@ -28192,7 +28192,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coins: 0
-  currentCoins: 0
   uiTextCoins: {fileID: 1419368696}
 --- !u!1 &2079039407 stripped
 GameObject:
