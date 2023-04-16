@@ -10,5 +10,6 @@ public class CollactableCoinBase : CollactableItemBase
     {
         base.OnCollect();
         ManagerItem.Instance.AddCoins();
+        ManagerItem.Instance.AddPotions();
     }
 }
