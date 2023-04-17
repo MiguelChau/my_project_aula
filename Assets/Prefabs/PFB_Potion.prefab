@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   compareTag: Player
+  itemType: 1
 --- !u!58 &4006835303523327295
 CircleCollider2D:
   m_ObjectHideFlags: 0

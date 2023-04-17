@@ -4,12 +4,25 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+public enum ItemType
+{
+    COIN,
+    POTION
+}
 public class CollactableCoinBase : CollactableItemBase
 {
+    [SerializeField] private ItemType itemType;
+
     protected override void OnCollect()
     {
         base.OnCollect();
-        ManagerItem.Instance.AddCoins();
-        ManagerItem.Instance.AddPotions();
+        if (itemType == ItemType.COIN)
+        {
+            ManagerItem.Instance.AddCoins();
+        }
+        else if (itemType == ItemType.POTION)
+        {
+            ManagerItem.Instance.AddPotions();
+        }
     }
 }
