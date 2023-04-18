@@ -28,6 +28,7 @@ public class PlayerBase : MonoBehaviour
         }
 
         _currentPlayer = Instantiate(soPlayerSetup.player, transform);
+        _currentPlayer.GetComponentInChildren<ShooterManager>().playerSideReference = transform;
     }
    
     
