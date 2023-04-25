@@ -15,6 +15,7 @@ public class HealthBase : MonoBehaviour
     private float _currentLife;
     private bool _isDead = false;
 
+    public ParticleSystem deathVFX;
     
 
     private void Awake()
@@ -51,5 +52,12 @@ public class HealthBase : MonoBehaviour
             
         }
         OnKill?.Invoke();
+
+        PlayDeathVFX();
+    }
+
+    private void PlayDeathVFX()
+    {
+        if (deathVFX != null) deathVFX.Play();
     }
 }

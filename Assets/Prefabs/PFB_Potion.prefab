@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   compareTag: Player
-  particleSystem: {fileID: 714921304268541362}
+  particleSystem: {fileID: 415416673354089506, guid: 84784ea3dbe8dec44a95a46280b5b5dd, type: 3}
   graphicItem: {fileID: 8094450203788485223}
   timeToHide: 2
   itemType: 1
@@ -262,11 +262,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84784ea3dbe8dec44a95a46280b5b5dd, type: 3}
---- !u!198 &714921304268541362 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 415416673354089506, guid: 84784ea3dbe8dec44a95a46280b5b5dd, type: 3}
-  m_PrefabInstance: {fileID: 876005515929487760}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1991441846758327058 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1696510908934802050, guid: 84784ea3dbe8dec44a95a46280b5b5dd, type: 3}
