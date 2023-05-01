@@ -26275,11 +26275,10 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8117278424228728294, guid: 50abf2d042bf7264c80414dde267de51, type: 3}
   m_PrefabInstance: {fileID: 8557499564366379401}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8557499564366379404
+--- !u!114 &8557499564366379404 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 3277278361965330559, guid: 50abf2d042bf7264c80414dde267de51, type: 3}
+  m_PrefabInstance: {fileID: 8557499564366379401}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8557499564366379403}
   m_Enabled: 1

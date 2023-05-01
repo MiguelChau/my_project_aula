@@ -13,6 +13,8 @@ public class CollactableCoinBase : CollactableItemBase
 {
     [SerializeField] private ItemType itemType;
 
+    public Collider2D collider;
+
     protected override void OnCollect()
     {
         base.OnCollect();
@@ -24,5 +26,7 @@ public class CollactableCoinBase : CollactableItemBase
         {
             ManagerItem.Instance.AddPotions();
         }
+
+        collider.enabled = false;
     }
 }
