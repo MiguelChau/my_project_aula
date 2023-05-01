@@ -13,6 +13,8 @@ public class ShooterManager : MonoBehaviour
 
     private Coroutine _currentCoroutine;
 
+    public AudioRandomPlayAudioClips randomShoot;
+
     public void Update()
     {
         if(Input.GetKeyDown(KeyCode.A))
@@ -35,6 +37,8 @@ public class ShooterManager : MonoBehaviour
     }
     public void Shoot()
     {
+        if (randomShoot != null) randomShoot.PlayRandom();
+
         var projectile = Instantiate(prefabProjectile);
         projectile.transform.position = positionToFire.position;
         projectile.side = playerSideReference.transform.localScale.x;

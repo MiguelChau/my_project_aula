@@ -27,6 +27,10 @@ public class PlayerBase : MonoBehaviour
 
     public ParticleSystem jumpVFX;
 
+    public AudioSource audioSourceDeath;
+    public AudioRandomPlayAudioClips randomJump;
+
+
     private void Awake()
     {
         if (healthBase != null)
@@ -52,6 +56,8 @@ public class PlayerBase : MonoBehaviour
     
     private void OnPlayerKill()
     {
+        if (audioSourceDeath != null) audioSourceDeath.Play();
+
         healthBase.OnKill -= OnPlayerKill;
 
         _currentPlayer.SetTrigger(soPlayerSetup.triggerDeath);
@@ -129,6 +135,8 @@ public class PlayerBase : MonoBehaviour
 
             HandleScale();
             PlayJumpVFX();
+
+            if (randomJump != null) randomJump.PlayRandom();
         }
         if (!isJumping)
         {
