@@ -29,6 +29,7 @@ public class PlayerBase : MonoBehaviour
 
     public AudioSource audioSourceDeath;
     public AudioRandomPlayAudioClips randomJump;
+    public GameOver gameOver;
 
 
     private void Awake()
@@ -59,8 +60,12 @@ public class PlayerBase : MonoBehaviour
         if (audioSourceDeath != null) audioSourceDeath.Play();
 
         healthBase.OnKill -= OnPlayerKill;
+        gameOver.ShowGameOverScreen();
+        gameObject.SetActive(false);
 
         _currentPlayer.SetTrigger(soPlayerSetup.triggerDeath);
+
+       
     }
     private void Update()
     {

@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class EndGame : MonoBehaviour
 {
     public string tagToCompare = "Player";
     public GameObject uiEndGame;
+    public TextMeshProUGUI stateCompleteText;
 
     public AudioSource audioSourceComplete;
 
@@ -21,5 +23,7 @@ public class EndGame : MonoBehaviour
     {
         if (audioSourceComplete != null) audioSourceComplete.Play();
         uiEndGame.SetActive(true);
+        stateCompleteText.text = "Stage Complete";
+
     }
 }
