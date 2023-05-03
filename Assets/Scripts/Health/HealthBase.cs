@@ -18,6 +18,7 @@ public class HealthBase : MonoBehaviour
     public ParticleSystem deathVFX;
     
 
+
     private void Awake()
     {
         Init();
@@ -60,4 +61,5 @@ public class HealthBase : MonoBehaviour
     {
         if (deathVFX != null) deathVFX.Play();
     }
+
 }

@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
+using UnityEngine.Audio;
 
 public class GameOver : MonoBehaviour
 {
     public string tagToCompare = "Player";
-    public TextMeshProUGUI gameOverText;
-    public GameObject gameOverScreen;
-    public AudioSource audioSourceComplete;
+    public GameObject uiGameOverScreen;
+    public AudioSource audioSourceGameOver;
+   
 
-
+   
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.transform.CompareTag(tagToCompare))
@@ -22,9 +22,9 @@ public class GameOver : MonoBehaviour
 
     public void ShowGameOverScreen()
     {
-        if (audioSourceComplete != null) audioSourceComplete.Play();
-        gameOverScreen.SetActive(true);
-        gameOverText.text = "Game Over!";
+        if (audioSourceGameOver != null) audioSourceGameOver.Play();
+        uiGameOverScreen.SetActive(true);
+              
 
         gameObject.SetActive(true);
     }

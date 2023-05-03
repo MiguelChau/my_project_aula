@@ -15,6 +15,11 @@ public class ShooterManager : MonoBehaviour
 
     public AudioRandomPlayAudioClips randomShoot;
 
+    private void Awake()
+    {
+        playerSideReference = GameObject.FindObjectOfType<PlayerBase>().transform;
+    }
+
     public void Update()
     {
         if(Input.GetKeyDown(KeyCode.A))

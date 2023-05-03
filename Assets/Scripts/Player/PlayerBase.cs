@@ -40,7 +40,7 @@ public class PlayerBase : MonoBehaviour
         }
 
         _currentPlayer = Instantiate(soPlayerSetup.player, transform);
-        _currentPlayer.GetComponentInChildren<ShooterManager>().playerSideReference = transform;
+        //_currentPlayer.GetComponentInChildren<ShooterManager>().playerSideReference = transform;
 
         if(collider2D != null)
         {
@@ -208,6 +208,5 @@ public class PlayerBase : MonoBehaviour
         _currentPlayer.SetBool("LookUp", false);
         _currentPlayer.SetBool("Jump", false);
     }
-
 
 }
