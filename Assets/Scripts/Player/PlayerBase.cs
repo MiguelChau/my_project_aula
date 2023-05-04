@@ -31,7 +31,7 @@ public class PlayerBase : MonoBehaviour
     public AudioRandomPlayAudioClips randomJump;
     public GameOver gameOver;
 
-
+    public float timeToChangeScreen = .2f;
     private void Awake()
     {
         if (healthBase != null)
@@ -60,13 +60,12 @@ public class PlayerBase : MonoBehaviour
         if (audioSourceDeath != null) audioSourceDeath.Play();
 
         healthBase.OnKill -= OnPlayerKill;
-        gameOver.ShowGameOverScreen();
-        gameObject.SetActive(false);
-
         _currentPlayer.SetTrigger(soPlayerSetup.triggerDeath);
 
-       
+        StartCoroutine(TimeChangeScreen());
     }
+
+    
     private void Update()
     {
         Restart();
@@ -209,4 +208,10 @@ public class PlayerBase : MonoBehaviour
         _currentPlayer.SetBool("Jump", false);
     }
 
+    IEnumerator TimeChangeScreen()
+    {
+        yield return new WaitForSeconds(timeToChangeScreen);
+        gameOver.ShowGameOverScreen();
+        gameObject.SetActive(false);
+    }
 }
