@@ -62,6 +62,11 @@ public class PlayerBase : MonoBehaviour
         healthBase.OnKill -= OnPlayerKill;
         _currentPlayer.SetTrigger(soPlayerSetup.triggerDeath);
 
+        if(collider2D != null)
+        {
+            collider2D.enabled = false;
+        }
+
         StartCoroutine(TimeChangeScreen());
     }
 
