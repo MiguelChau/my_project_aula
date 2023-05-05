@@ -37126,7 +37126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRigidBody: {fileID: 2118063563}
   healthBase: {fileID: 2118063567}
-  soPlayerSetup: {fileID: 11400000, guid: 471b6abee4e4d324699c1a29bd813169, type: 2}
+  soPlayerSetup: {fileID: 11400000, guid: 13e0f3cb479937a43b3f496d65ed0bf0, type: 2}
   isLookingUp: 1
   collider2D: {fileID: 2118063564}
   distanceToGround: 0
